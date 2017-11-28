@@ -9,18 +9,13 @@ package messenger.automata;
  *
  * @author Pham Anh Thu
  */
-public class State2 implements State{
+public class State2 extends State1{
 
     @Override
     public int getNext(char c) {
         switch(c){
             case ' ': return 3;
-            default: return 7;
+            default: return 8;
         }
-    }
-    
-    @Override
-    public void show(){
-        System.out.println("Processing");
     }
 }

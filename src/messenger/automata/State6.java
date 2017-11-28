@@ -9,7 +9,7 @@ package messenger.automata;
  *
  * @author Pham Anh Thu
  */
-public class State6 implements State{
+public class State6 extends State4{
     @Override
     public int getNext(char c){
         return 6;
@@ -17,6 +17,6 @@ public class State6 implements State{
     
     @Override
     public void show(){
-        System.out.println("Unnecessary Character");
+        System.out.println("YES - STATE 6");
     }
 }

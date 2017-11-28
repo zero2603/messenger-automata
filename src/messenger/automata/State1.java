@@ -9,7 +9,7 @@ package messenger.automata;
  *
  * @author Pham Anh Thu
  */
-public class State1 implements State{
+public class State1 extends State0{
     @Override
     public int getNext(char c){
         switch(c){

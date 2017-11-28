@@ -9,17 +9,16 @@ package messenger.automata;
  *
  * @author Pham Anh Thu
  */
-public class State4 implements State{
+public class State4 extends State3{
     @Override
     public int getNext(char c){
-        switch(c){
-            case ' ':
-            case '\u0000': return 4;
-            default: return 6;
-        }       
+       if(c=='\u0000') return 4;
+       else if((c>='A' && c<='Z') || (c>='a' && c<='z')) return 8;
+       else return 6;
     } 
     
+    @Override
     public void show() {
-        System.out.println("Yes");
+        System.out.println("Yes -STATE4");
     }
 }

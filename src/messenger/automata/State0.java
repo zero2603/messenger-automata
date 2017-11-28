@@ -9,8 +9,7 @@ package messenger.automata;
  *
  * @author Pham Anh Thu
  */
-public class State0 implements State{
-    @Override
+public class State0{
     public int getNext(char c) {
         switch(c){
             case ' ': return 0;
@@ -18,9 +17,8 @@ public class State0 implements State{
             default: return 7;
         }
     }
-    
-    @Override
+
     public void show(){
-        System.out.println("Processing");
+        System.out.println("Initialize");
     }
 }

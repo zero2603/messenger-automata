@@ -9,10 +9,10 @@ package messenger.automata;
  *
  * @author Pham Anh Thu
  */
-public class State7 implements State{
+public class State7 extends State0{
     @Override
     public int getNext(char c){
-        return 9;
+        return 7;
     }
     
     @Override

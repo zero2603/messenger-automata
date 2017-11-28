@@ -12,18 +12,17 @@ import java.util.Scanner;
  * @author Pham Anh Thu
  */
 public class MessengerAutomata {
-    public static State[] arrayState = {new State0(), new State1(), new State2(),
+    public static State0[] arrayState = {new State0(), new State1(), new State2(),
                                 new State3(), new State4(), new State5(),
                                 new State6(), new State7(), new State8()};
     
-    public static State getState(int index){
-        if(index >= arrayState.length) return arrayState[7];
+    public static State0 getState(int index){
         return arrayState[index];
     }
     
     public static void main(String[] args) {
         // TODO code application logic here
-        State s = arrayState[0];
+        State0 s = arrayState[0];
         int nextState;
         String input;
         
@@ -35,6 +34,8 @@ public class MessengerAutomata {
             nextState = s.getNext(input.charAt(i));
             s = MessengerAutomata.getState(nextState);
         }
+        nextState = s.getNext('\u0000');
+        s = MessengerAutomata.getState(nextState);
         s.show();
         
     }
